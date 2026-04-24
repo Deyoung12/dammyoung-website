@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAMMYOUNG | Engineering Growth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #000000;
+            --accent: #2ecc71; /* A "Success" green for conversions */
+            --bg: #f9f9f9;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        /* Hero Section */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        /* Services Grid */
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0;
+        }
+
+        /* Payment Button */
+        .btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+
+        /* Engineering Section */
+        .engineer-note {
+            text-align: center;
+            padding: 50px 20px;
+            background: #eee;
+            border-radius: 10px;
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">DAMMYOUNG</div>
+        <p class="tagline">Data-Driven Social Media Strategy & E-commerce Engineering</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-chart-line fa-3x"></i>
+                <h3>SMM Strategy</h3>
+                <p>30 days of automated content, growth tracking, and lead generation.</p>
+                <span class="price">$199</span>
+                <button class="btn" onclick="payWithPaystack('smm')">Purchase Now</button>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-code fa-3x"></i>
+                <h3>E-com Audit</h3>
+                <p>Technical CRO audit to increase your conversion rate by up to 20%.</p>
+                <span class="price">$299</span>
+                <button class="btn" onclick="payWithPaystack('audit')">Purchase Now</button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="engineer-note">
+            <h3>Why the Engineering approach?</h3>
+            <p>I don't just "post." I build automated funnels and optimized landing pages that convert traffic into revenue.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DAMMYOUNG. All rights reserved. | <a href="mailto:contact@dammyoung.com">contact@dammyoung.com</a></p>
+    </footer>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
+    <script>
+      function payWithPaystack(service) {
+        // You will replace 'YOUR_PUBLIC_KEY' with your real key from Paystack Dashboard
+        let handler = PaystackPop.setup({
+          key: 'YOUR_PUBLIC_KEY', 
+          email: 'customer@example.com',
+          amount: service === 'smm' ? 19900 : 29900, // Amount in Kobo/Cents
+          currency: 'USD',
+          callback: function(response) {
+            alert('Payment successful! Reference: ' + response.reference);
+            // Here you can send an email to contact@dammyoung.com using a Webhook
+          },
+          onClose: function() {
+            alert('Window closed.');
+          }
+        });
+        handler.openIframe();
+      }
+    </script>
+</body>
+</html>
