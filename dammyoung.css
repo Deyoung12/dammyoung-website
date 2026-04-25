@@ -1,0 +1,153 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: 100;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    backdrop-filter:blur(6px);
+}
+.logo img {
+    width: 90px;
+    height:  90px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.hero{
+    background-color: gray;
+    border-radius: 30px;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.hero h1{
+    text-align: center;
+    font-size: 34px;
+    font-weight: 300;
+    color: white;
+}
+.hero p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+.hero img{
+    background-color: black;
+    margin-left: 30rem;
+    border-radius: 100%;
+    box-shadow: 0 0 20px 0 rgba(94, 153, 221, 0.986);
+    width: 300px;
+}
+.hero button{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 50px;
+    margin-left: 38%;
+}
+.section{
+    border: 10px;
+    border-radius: 30px;
+    outline-style: double;
+    outline-width: 1px;
+    outline-color: white;
+    padding: 30px;
+    margin: 2rem;
+    color: white;
+    display: flex;
+    gap: 20px;
+    box-shadow:0 0 10px hite;
+}
+.content{
+    text-align: center;
+}
+.content strong{
+    font-size: 64px;
+    font-weight: 500;
+    color: white;
+}
+.content p{
+    font-size: 18px;
+    color: gray;
+}
+.card{
+    display: block;
+    box-shadow: 0 4px 8px 0 rgb(243, 239, 239);
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 1000px;
+    height: 400px;
+}
+.card img{
+    padding: 10px;
+    border-radius: 40px;
+    width: 100px;
+}
+.card:hover{
+    box-shadow: 0 10px 20px 0 rgba(97, 205, 248, 0.466);
+    
+}
+.container{
+    padding: 2px 16px;
+}
+.container h1{
+    font-size: 36px;
+    font-weight: 500px;
+}
+.container h5{
+    font-size: 16px;
+}
+.project{
+    border: 10px;
+    border-radius: 30px;
+    outline-style: double;
+    outline-width: 1px;
+    outline-color: white;
+    padding: 30px;
+    margin: 2rem;
+    color: white;
+    display: flex;
+    gap: 20px;
+    box-shadow:0 0 10px hite;
+}
+.card2{
+    outline-style: double;
+    outline-width: 1px;
+    outline-color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 1000px;
+    height: 500px;
+}
+.card2 img{
+    border-radius: 20px 20px 0 0;
+    width: 390px;
+    height: 200px;
+
+}
+.container h6{
+    text-align: center;
+    margin: 20px;
+    color: gray;
+    gap: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.container strong{
+    color: white;
+    font-size: 16px;
+}
