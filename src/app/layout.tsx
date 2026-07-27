@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import SmoothScroll from "@/components/SmoothScroll";
 import { CookieConsent } from "@/components/CookiesConsent";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -76,6 +77,7 @@ export default function RootLayout({
   data-domain="dammyoung.com"   // ← change to your real domain later
   src="https://plausible.io/js/script.js"
 />
+        <Analytics />
       </body>
     </html>
   );
