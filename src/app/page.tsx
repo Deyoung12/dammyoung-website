@@ -6,45 +6,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { TrustLogos } from "@/components/TrustLogos";
-
-const projects = [
-  {
-    title: "Aurelia Skin",
-    category: "Shopify • E-commerce",
-    result: "+212% conversion",
-    description: "Luxury skincare DTC store with custom theme and high-converting checkout.",
-  },
-  {
-    title: "Halcyon Studio",
-    category: "WordPress • Agency",
-    result: "Editorial portfolio",
-    description: "Architecture portfolio with sophisticated editorial layout and smooth interactions.",
-  },
-  {
-    title: "Velora Capital",
-    category: "Wix • Finance",
-    result: "Investor-grade site",
-    description: "Professional marketing site & CMS for a finance brand.",
-  },
-  {
-    title: "Maison Noir",
-    category: "Branding + Web",
-    result: "Full brand system",
-    description: "Complete brand identity and digital presence for a premium fragrance house.",
-  },
-  {
-    title: "Pulse FM",
-    category: "Social + Campaign",
-    result: "1.4M organic reach",
-    description: "Content engine that delivered massive organic reach in 90 days.",
-  },
-  {
-    title: "Northwind Co.",
-    category: "Shopify • Apparel",
-    result: "Headless commerce",
-    description: "Headless Shopify storefront with custom checkout experience.",
-  },
-];
+import { projects } from "@/data/projects";
 
 const processSteps = [
   { number: "01", title: "System Audit", text: "We map your brand, audience and growth gaps through technical workshops." },
@@ -217,21 +179,39 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, i) => (
               <AnimatedSection key={project.title} delay={i * 0.08}>
-                <Link href="/work" className="group block">
-                  <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-blue-50 to-orange-50 border border-gray-200 overflow-hidden mb-5 relative">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-gray-400 font-medium">{project.title}</span>
-                    </div>
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition" />
+                <Link href="/work" className="group block overflow-hidden rounded-3xl border border-gray-200 bg-white hover:shadow-xl transition-all duration-500">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                    {project.mediaType === "video" ? (
+                      <video
+                        src={project.media}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <Image
+                        src={project.media}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm text-gray-500 mt-1">{project.category}</p>
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition">
+                          {project.title}
+                        </h3>
+                        <p className="text-sm text-gray-500 mt-1">{project.category}</p>
+                      </div>
+                      <span className="text-sm font-medium text-orange-500">{project.result}</span>
                     </div>
-                    <span className="text-sm font-medium text-orange-500">{project.result}</span>
+                    <p className="text-gray-600 text-sm leading-relaxed">{project.description}</p>
                   </div>
                 </Link>
               </AnimatedSection>

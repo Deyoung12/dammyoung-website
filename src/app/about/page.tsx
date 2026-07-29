@@ -24,6 +24,20 @@ export default function AboutPage() {
               Using our EDGE framework — Engineering Growth, Designing Experience —  
               we build systems that turn ambitious brands into measurable revenue machines.
             </p>
+            <div className="flex flex-wrap gap-4 mt-8">
+              <Link
+                href="/about/faq"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/about/blogs"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition"
+              >
+                Blogs
+              </Link>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -46,13 +60,14 @@ export default function AboutPage() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.15}>
-              <div className="relative aspect-square rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-orange-50 border border-gray-200 flex items-center justify-center">
+              <div className="relative w-full rounded-3xl overflow-hidden bg-gradient-to-br from-blue-50 to-orange-50 border border-gray-200">
                 <Image
-                  src="/logo.png"
-                  alt="DAMMYOUNG"
-                  width={180}
-                  height={180}
-                  className="drop-shadow-xl"
+                  src="/DAMMYOUNG_official_team_photo.png"
+                  alt="DAMMYOUNG Team"
+                  width={914}
+                  height={608}
+                  className="object-cover w-full h-auto"
+                  priority
                 />
               </div>
             </AnimatedSection>

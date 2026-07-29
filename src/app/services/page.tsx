@@ -7,7 +7,7 @@ const packages = [
   {
     id: "brand-launch",
     title: "Brand Launch Package",
-    price: "$1,450",
+    price: "$1,500",
     priceNote: "Starting from",
     description: "Complete branding + website + social setup to launch strong.",
     popular: false,
@@ -24,7 +24,7 @@ const packages = [
   {
     id: "digital-marketing",
     title: "Digital Marketing Package",
-    price: "$890",
+    price: "$3,000",
     priceNote: "per month",
     description: "SEO, social, paid ads and email that drive real growth.",
     popular: true,
@@ -58,7 +58,7 @@ const packages = [
   {
     id: "corporate",
     title: "Corporate Digital Presence",
-    price: "$1,850",
+    price: "$8,000",
     priceNote: "Starting from",
     description: "Professional website + brand system for established companies.",
     popular: false,
@@ -96,7 +96,7 @@ const packages = [
     priceNote: "Talk to us",
     description: "Software, automation, analytics and consulting at scale.",
     popular: false,
-    paymentLink: "https://wa.me/+2348066945800?text=Hi%20DAMMYOUNG,%20I%20need%20a%20custom%20Enterprise%20quote",
+    paymentLink: "https://wa.me/2348066945800?text=Hi%20DAMMYOUNG,%20I%20need%20a%20custom%20Enterprise%20quote",
     includes: [
       "Digital transformation roadmap",
       "Custom software & integrations",
