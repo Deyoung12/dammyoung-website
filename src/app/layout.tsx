@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   keywords: ["digital agency", "headless commerce", "Shopify", "e-commerce development", "branding", "growth marketing"],
   authors: [{ name: "DAMMYOUNG" }],
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
   openGraph: {
     type: "website",
@@ -58,9 +58,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
         <meta name="p:domain_verify" content="2670f2028871036645bc17257b89880c" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png?v=1" />
+        <link rel="shortcut icon" href="/logo.png?v=1" />
+        <link rel="apple-touch-icon" href="/logo.png?v=1" />
         <Script id="clarity-script" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){
