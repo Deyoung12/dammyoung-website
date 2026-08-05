@@ -20,9 +20,13 @@ export const metadata: Metadata = {
   keywords: ["digital agency", "headless commerce", "Shopify", "e-commerce development", "branding", "growth marketing"],
   authors: [{ name: "DAMMYOUNG" }],
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-icon.png", // optional
   },
+
   openGraph: {
     type: "website",
     locale: "en_US",
